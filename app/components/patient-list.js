@@ -6,4 +6,5 @@ export default class PatientListComponent extends Component {
   showPatient(patient) {
     alert(`The patient's name is ${patient.name}!`);
   }
+  
 }
