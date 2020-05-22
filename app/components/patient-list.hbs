@@ -1,0 +1,6 @@
+{{yield}}
+<ul>
+  {{#each @patients as |patient|}}
+    <li>{{patient.name}}<button {{on 'click' (fn this.showPatient patient)}}>view</button></li>
+  {{/each}}
+</ul>
