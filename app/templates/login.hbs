@@ -1,6 +1,19 @@
-<div>
-    <div>username/email <input type="text" /></div>
-    <div>Password <input type="password" /></div>
-    <button>Login</button>
+<div class="login-container text-center">
+    <form class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    
+    {{input type="email" class="form-control" placeholder="Email address or username" required="true" autofocus="true" value=email}}
+    <label for="inputPassword" class="sr-only">Password</label>
+    {{input  type="password" class="form-control" placeholder="Password" required="true" value=password}} 
+    
+    <div class="checkbox mb-3">
+        <label>
+        <input type="checkbox" value="remember-me"> Remember me
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="button" {{action "login"}}>Sign in</button>
+    </form>
 </div>
 {{outlet}}
+
