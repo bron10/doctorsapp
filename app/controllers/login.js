@@ -10,10 +10,16 @@ export default class LoginController extends Controller {
     login(){
         const email     = this.get('email'); 
         const password  = this.get('password');
-        if(this.user.login(email, password)){
-            this.transitionToRoute('dashboard');
+        const loggedIn = this.user.login(email, password);
+        if(loggedIn){
+            const isDoctor = loggedIn.creds.role==='doctor'
+            if(isDoctor) {
+                this.transitionToRoute('dashboard');
+            }else{
+                this.transitionToRoute('patient',{patient_id : loggedIn.id, ...loggedIn});
+            }
         }else{
-            alert("Invalid credentials");
+            alert("Invalid email or password");
         }
 
         // if(this.validate(email, password)){

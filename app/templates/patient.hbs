@@ -1,0 +1,41 @@
+{{outlet}}
+<Navbar />
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+  <div class="panel-heading">Profile</div>
+  <div class="panel-body">
+    <p>{{@model.name}}</p>
+  </div>
+
+  <!-- List group -->
+  <ul class="list-group">
+    <li class="list-group-item panel panel-info"><div class="panel-heading">Address</div>
+  <div class="panel-body">
+    {{@model.address}}
+  </div></li>
+    <li class="list-group-item panel panel-info"><div class="panel-heading">Gender</div>
+  <div class="panel-body">
+    {{@model.gender}}
+  </div></li>
+   <li class="list-group-item panel panel-info"><div class="panel-heading">Date of Birth</div>
+  <div class="panel-body">
+    {{@model.dob}}
+  </div></li>
+  <li class="list-group-item panel panel-info"><div class="panel-heading">Age</div>
+  <div class="panel-body">
+    {{@model.age}}
+  </div></li>
+  <li class="list-group-item panel panel-info"><div class="panel-heading">Symptoms</div>
+  <div class="panel-body">
+    {{@model.symptoms}}
+  </div></li>
+  <li class="list-group-item panel panel-info"><div class="panel-heading">Prescription</div>
+  <div class="panel-body">
+    {{@model.prescription}}
+  </div></li>
+  <li class="list-group-item panel panel-info"><div class="panel-heading">visitedDate</div>
+  <div class="panel-body">
+    {{@model.visitedDate}}
+  </div></li>   
+  </ul>
+</div>

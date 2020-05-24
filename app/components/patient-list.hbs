@@ -1,6 +1,9 @@
 {{yield}}
-<ul>
-  {{#each @patients as |patient|}}
-    <li>{{patient.name}}<button {{on 'click' (fn this.showPatient patient)}}>view</button></li>
+<ul class="list-group list-group-flush">
+  {{#each patients as |patient|}}
+    <li class="list-group-item"><LinkTo @route="patient" @model={{patient.id}}>{{patient.name}}</LinkTo> 
+    {{!-- <span class="label label-primary">View</span> --}}
+    <span class="label label-danger pull-right" {{on "click" (fn this.deletePatient patient.id)}}>Delete</span>
+</li>
   {{/each}}
 </ul>

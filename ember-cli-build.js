@@ -1,12 +1,12 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-
+const data = require('./app/data/data')
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     lessOptions: {
       paths: ['node_modules/bootstrap-less/bootstrap/'],
-    },
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
