@@ -21,11 +21,6 @@ export default class LoginController extends Controller {
         }else{
             alert("Invalid email or password");
         }
-
-        // if(this.validate(email, password)){
-        //     const role = this.getRole(email)
-        //     this.store.createRecord('user', {email, password, role})
-        // }
     }
 
     validate(email, password){

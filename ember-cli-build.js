@@ -1,7 +1,4 @@
-'use strict';
-
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-const data = require('./app/data/data')
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     lessOptions: {
